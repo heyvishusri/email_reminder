@@ -62,7 +62,7 @@ This script will:
 - Check for due reminders
 - Send email notifications automatically
 
-## 🧠 Skills You'll Learn
+## 🧠 Skills Learn
 
 - Reading & writing **CSV files** in Python  
 - Handling **datetime** and **recurrence** logic  
