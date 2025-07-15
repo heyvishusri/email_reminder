@@ -27,10 +27,13 @@ This project is part of the **Real World Python** Project. It demonstrates how t
 
 3. **Create and activate a virtual environment**  
    Linux/macOS:
+   
    python -m venv .venv
+   
    source .venv/bin/activate
 
    Windows:
+   
    .venv\Scripts\activate
 
 
@@ -40,10 +43,11 @@ This project is part of the **Real World Python** Project. It demonstrates how t
 
 4. **Create your `.env` file**  
    EMAIL_ADDRESS=yourgmail@gmail.com
+   
    EMAIL_PASSWORD=your_app_password
 
 
-5. **Run the GUI application**  
+6. **Run the GUI application**  
    python gui.py
 
 
