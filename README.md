@@ -78,6 +78,8 @@ If you encounter any issues or have suggestions, feel free to open an issue on t
 
 
 
+## 📄 License
 
+This project is licensed under the [MIT License](LICENSE).
 
 
