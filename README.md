@@ -75,5 +75,10 @@ If you encounter any issues or have suggestions, feel free to open an issue on t
 
 🔒 **Note**: This project uses Gmail SMTP. For security, always use an [App Password](https://support.google.com/accounts/answer/185833) instead of your main Gmail password.
 
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
 
 
