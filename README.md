@@ -1,4 +1,5 @@
 # 📬 Email Reminder App – Real World Python Project
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 This project is part of the **Real World Python** Project. It demonstrates how to build a production-ready **Email Reminder Application** with scheduled and recurring notifications using Python, SMTP, and PyQt6.
 
@@ -75,9 +76,7 @@ If you encounter any issues or have suggestions, feel free to open an issue on t
 
 🔒 **Note**: This project uses Gmail SMTP. For security, always use an [App Password](https://support.google.com/accounts/answer/185833) instead of your main Gmail password.
 
-## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
 
 
 
