@@ -1,4 +1,6 @@
-from PyQt6.QtWidgets import QApplication, QLabel, QWidget, QVBoxLayout, QDateTimeEdit, QLineEdit, QTextEdit
+from PyQt6.QtWidgets import (QApplication, QLabel, QWidget, QVBoxLayout,
+                             QDateTimeEdit, QSpacerItem, QHBoxLayout,
+                             QLineEdit, QTextEdit, QSizePolicy, QPushButton)
 import sys
 from PyQt6.QtCore import QDateTime
 
@@ -40,10 +42,18 @@ class ReminderApp(QWidget):
         layout.addWidget(self.repeat_label)
         layout.addWidget(self.repeat_input)
 
+        ##Button_layout
+        button_layout = QHBoxLayout()
+        self.submit_button = QPushButton("Add Reminder")
+        self.close_button = QPushButton("Close")
+        button_layout.addWidget(self.submit_button)
+        button_layout.addWidget(self.close_button)
+        layout.addLayout(button_layout)
 
 
-
-
+        layout.addSpacerItem(QSpacerItem(20, 40,
+                                         QSizePolicy.Policy.Minimum,
+                                         QSizePolicy.Policy.Expanding))
         self.setLayout(layout)
 
 app = QApplication(sys.argv)
