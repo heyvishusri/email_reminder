@@ -33,6 +33,14 @@ class ReminderApp(QWidget):
         layout.addWidget(self.reminder_label)
         layout.addWidget(self.reminder_input)
 
+        #Repeat interval
+        self.repeat_label = QLabel("Repeat Interval: ")
+        self.repeat_input = QLineEdit()
+        self.repeat_input.setPlaceholderText("e.g., 1d, 2w, 3m")
+        layout.addWidget(self.repeat_label)
+        layout.addWidget(self.repeat_input)
+
+
 
 
 
