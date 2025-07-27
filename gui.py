@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import (QApplication, QLabel, QWidget, QVBoxLayout,
                              QDateTimeEdit, QSpacerItem, QHBoxLayout,
                              QLineEdit, QTextEdit, QSizePolicy, QPushButton)
 import sys
+import  requests
 from PyQt6.QtCore import QDateTime
 
 
@@ -45,16 +46,27 @@ class ReminderApp(QWidget):
         ##Button_layout
         button_layout = QHBoxLayout()
         self.submit_button = QPushButton("Add Reminder")
+        self.submit_button.clicked.connect(self.submit_reminder)
         self.close_button = QPushButton("Close")
         button_layout.addWidget(self.submit_button)
         button_layout.addWidget(self.close_button)
         layout.addLayout(button_layout)
 
-
         layout.addSpacerItem(QSpacerItem(20, 40,
                                          QSizePolicy.Policy.Minimum,
                                          QSizePolicy.Policy.Expanding))
         self.setLayout(layout)
+
+    def submit_reminder(self):
+        datetime=self.datetime_picker.dateTime().toString("yyyy-MM-dd HH:mm")
+        date, time = datetime.split(" ")
+        data = {"date": date,
+                "time": time,
+                "email": self.email_input.text(),
+                "message": self.email_input.toPlainText(),
+                "repeat_interval": self.repeat_input.text()}
+        response = requests.post("http://vishu9931.pythonanywhere.com/add",
+                                 json=data)
 
 app = QApplication(sys.argv)
 window = ReminderApp()
